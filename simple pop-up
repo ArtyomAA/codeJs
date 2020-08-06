@@ -1,0 +1,52 @@
+jQuery(function($) {
+	"use strict";
+
+		$(document).ready(function () {
+
+			jQuery(function(){
+				var today = new Date();
+				today.setDate(today.getDate() + (8-today.getDay()));
+				var rudate = today.toLocaleString('ru', {month: 'long',day: 'numeric'})
+				jQuery("#akcdate").text(rudate);
+			});
+
+		});
+		$('.callback-btn').on('click', function () {
+			$('.callback-form').show();
+		});
+		 $('#close').on('click', function() {
+		 	$('.callback-form').hide();
+		 });
+
+
+		$('.about-contact-block').hide();
+		$('.about-contact').on('click', function () {
+			$('.about-contact-block').show();
+		});
+		 $('#close').on('click', function() {
+		 	$('.about-contact-block').hide();
+		 });
+		 
+
+		 $('.message-btn').on('click', function () {
+			$('.message-form').show();
+		});
+
+		 $('#big-close').on('click', function() {
+		 	$('.message-form').hide();
+		 });
+
+		 $('form').change(function(e){
+		 	e.preventDefault();
+		 });
+
+
+		 <script>
+	var popup = document.querySelector('.about-contact-block');
+
+	document.addEventListener('mousedown', function(e){
+	  if(e.target.closest('.block-about') === null){
+	  		popup.style.display = 'none';
+	  }
+	});
+</script>

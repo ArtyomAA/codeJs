@@ -1,0 +1,1 @@
+<a href="http://shpargalkablog.ru/" onclick="raz1(); return false;">Я ссылка, по мне не перейти, но я покажу сообщение</a>
